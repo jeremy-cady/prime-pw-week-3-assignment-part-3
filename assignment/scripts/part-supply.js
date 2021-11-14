@@ -82,8 +82,16 @@ while(partsChange<supplyChanges.length) {
     let change = supplyChanges[partsChange];
     partsChange++;
     console.log('Supply change:', change);
-    
-}
+        if (change>0) {
+            console.log(`Added ${change} parts.`);
+        } //end if
+        else if (change===0) {
+            console.log('No change.');
+        } //end else if
+        else {
+            console.log(`Removed ${change} parts.`);   
+        } //end else
+} //end while
 
 
 // 9. Write a loop to determine the total number of parts available by
